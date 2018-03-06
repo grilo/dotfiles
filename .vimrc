@@ -23,3 +23,10 @@ au BufNewFile,BufRead *.js, *.html, *.css, *.yml, *.yaml
     \ set softtabstop=2
     \ set shiftwidth=2
     \ set expandtab
+
+
+" turn off background colors (transparent terminal)
+hi Identifier      cterm=bold
+hi MatchParen      ctermfg=229
+hi Normal          ctermbg=none
+hi Visual          ctermbg=0
