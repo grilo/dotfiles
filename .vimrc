@@ -5,6 +5,14 @@ set t_Co=256
 set encoding=utf-8
 set showmatch "Hightlight () and {}
 set modeline
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set textwidth=79
+set expandtab
+set autoindent
+set fileformat=unix
+set hlsearch
 syn on
 color molokai
 
@@ -30,3 +38,7 @@ hi Identifier      cterm=bold
 hi MatchParen      ctermfg=229
 hi Normal          ctermbg=none
 hi Visual          ctermbg=0
+
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
